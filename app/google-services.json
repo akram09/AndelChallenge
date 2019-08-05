@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "794373638850",
+    "firebase_url": "https://andela-challenge-9d2ea.firebaseio.com",
+    "project_id": "andela-challenge-9d2ea",
+    "storage_bucket": "andela-challenge-9d2ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794373638850:android:ccaa1b6087320897",
+        "android_client_info": {
+          "package_name": "com.kero.andelchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794373638850-kkm6uibf2slepv6pceqkbndvg0j9lc9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kero.andelchallenge",
+            "certificate_hash": "59249550f87d42971094e82ee9fa45460d6788c1"
+          }
+        },
+        {
+          "client_id": "794373638850-j2oqtt4tmeurcikqr9jedml10sghkhss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm96jD0utq-azAfeglq60gs3ECtOT9vVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794373638850-j2oqtt4tmeurcikqr9jedml10sghkhss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
