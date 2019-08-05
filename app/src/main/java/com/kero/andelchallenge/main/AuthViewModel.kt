@@ -91,7 +91,7 @@ class AuthViewModel:BaseViewModel<ViewState>(ViewState()) {
             override fun onDataChange(p0: DataSnapshot) {
                 var found =false
                 for (data in p0.children){
-                    val userId = data.getValue(String::class.java)
+                    val userId = data.child("uid").getValue(String::class.java)
                     if(userId==id){
                         found = true
                         break

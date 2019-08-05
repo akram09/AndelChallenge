@@ -32,7 +32,7 @@ class AuthenticationActivity : AppCompatActivity() {
     private val viewModel = ViewModelProviders.of(this)[AuthViewModel::class.java]
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        binding = DataBindingUtil.setContentView(this , R.layout.activity_main)
         viewModel.observe(this ){
             var authState = it.authState
             when(authState){
@@ -59,7 +59,6 @@ class AuthenticationActivity : AppCompatActivity() {
 
             }
         }
-        binding = DataBindingUtil.setContentView(this , R.layout.activity_main)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()

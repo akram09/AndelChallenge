@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            app:layout_constraintGuide_percent="0.9"
+            android:orientation="vertical"
+            android:id="@+id/guideline1"
+            android:layout_height="match_parent"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            app:layout_constraintGuide_percent="0.1"
+            android:orientation="vertical"
+            android:id="@+id/guideline2"
+            android:layout_height="wrap_content"/>
+    <ProgressBar
+            android:layout_width="wrap_content"
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:layout_width="0dp"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:hintEnabled="true"
+                android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/email_edittext"
+                    android:hint="@string/email"
+                    android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:hintEnabled="true"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/fname_edittext"
+                    android:hint="@string/first_amp_last_name"
+                    android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:hintEnabled="true"
+                android:layout_marginTop="50dp"
+                app:passwordToggleEnabled="true"
+                android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/pass_edittext"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:text="@string/save"
+                android:id="@+id/btn_save"
+                android:textColor="#FFFF"
+                android:background="@color/colorAccent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

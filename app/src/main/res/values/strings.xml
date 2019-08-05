@@ -2,5 +2,8 @@
     <string name="app_name">AndelChallenge</string>
     <string name="sign_in_with_google">Sign in with Google</string>
     <string name="sign_in_with_email">Sign in with Email</string>
+    <string name="first_amp_last_name"><![CDATA[First & Last Name]]></string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
 
 </resources>
