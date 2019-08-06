@@ -2,7 +2,6 @@ package com.kero.andelchallenge.main
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.firebase.ui.auth.data.model.User
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -72,7 +71,6 @@ class AuthViewModel:BaseViewModel<ViewState>(ViewState()) {
             return Fail(Failure.AuthFailure.UknownwFailure)
         }
         return Success(UserType.NON_AUth)
-
     }
 
     /**

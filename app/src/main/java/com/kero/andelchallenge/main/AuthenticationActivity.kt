@@ -29,10 +29,12 @@ const val SIGN_IN = 57894
 class AuthenticationActivity : AppCompatActivity() {
 
     private lateinit var binding :ActivityMainBinding
-    private val viewModel = ViewModelProviders.of(this)[AuthViewModel::class.java]
+    private lateinit var viewModel:AuthViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+         viewModel = ViewModelProviders.of(this)[AuthViewModel::class.java]
         binding = DataBindingUtil.setContentView(this , R.layout.activity_main)
+        setSupportActionBar(binding.toolbar)
         viewModel.observe(this ){
             var authState = it.authState
             when(authState){
@@ -44,7 +46,6 @@ class AuthenticationActivity : AppCompatActivity() {
                                 this,
                                 if (authState() == UserType.SIMPLE_USER) UserActivity::class.java else AdminActivity::class.java
                             )
-
                         )
                         finish()
                     }
@@ -87,7 +88,8 @@ class AuthenticationActivity : AppCompatActivity() {
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
                 Log.e("errr", "google sign in failed")
-                Toast.makeText(this , "Google sign in failed " , Toast.LENGTH_LONG).show()
+               e.printStackTrace()
+                Toast.makeText(this@AuthenticationActivity , "Google sign in failed " , Toast.LENGTH_LONG).show()
             }
         }
     }

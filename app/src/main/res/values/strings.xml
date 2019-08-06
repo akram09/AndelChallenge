@@ -5,5 +5,8 @@
     <string name="first_amp_last_name"><![CDATA[First & Last Name]]></string>
     <string name="email">Email</string>
     <string name="save">Save</string>
+    <string name="select_image">Select IMAGE</string>
+    <string name="travel_mantics">Travelmantics</string>
+    <string name="sign_up">Sign Up</string>
 
 </resources>
