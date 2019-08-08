@@ -29,6 +29,7 @@ class AuthViewModel:BaseViewModel<ViewState>(ViewState()) {
                 copy(Loading())
             }
             val userState = getUserType()
+            Log.e("errr", userState.toString())
             setState {
                 copy(userState)
             }
@@ -77,7 +78,7 @@ class AuthViewModel:BaseViewModel<ViewState>(ViewState()) {
      * this function will check if the given userId is admin or a simple user
      */
     private suspend fun checkIfAdmin(id:String):Either<Failure.AuthFailure , Boolean > =
-        firebaseDatabase.reference.child("admin").containId(id)
+        firebaseDatabase.reference.child("admins").containId(id)
 
     private suspend fun DatabaseReference.containId(id:String):Either<Failure.AuthFailure , Boolean > = suspendCoroutine {
        addListenerForSingleValueEvent(object :ValueEventListener{

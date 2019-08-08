@@ -33,7 +33,7 @@ class Adapter(val context: Context, val list :List<Product>):RecyclerView.Adapte
             Picasso.get().load(product.imageUrl).into(imageView)
             productName.text = product.name
             description.text = product.description
-            price.setText(product.price)
+            price.text = product.price.toString()
         }
 
     }
